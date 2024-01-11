@@ -1,7 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{js,jsx,ts,tsx}", "./index.html"],
-
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontSize: {
       sm: "0.750rem",
@@ -14,16 +13,17 @@ export default {
     },
     extend: {
       colors: {
-        text: "#e1e6f4",
-        background: "#00030b",
-        primary: "#9daad9",
-        secondary: "#4f3180",
-        accent: "#8547b8",
+        element: "var(--element)",
+        background: "var(--background)",
+        text: "var(--text)",
+
+        black: "var(--black)",
+        gray: "var(--gray)",
+        white: "var(--white)",
       },
       screens: {},
-      fontFamily: {},
       transitionProperty: {},
     },
   },
-  plugins: ["prettier-plugin-tailwindcss"],
+  plugins: [],
 };

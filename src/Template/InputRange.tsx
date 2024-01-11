@@ -1,12 +1,17 @@
 import React from "react";
 
-const InputRange = ({ value, set }) => {
+type InputProps = {
+  value: string;
+  set: React.Dispatch<React.SetStateAction<number>>;
+};
+
+const InputRange = ({ value, set }: InputProps) => {
   return (
     <>
       <div className="flex gap-4 ">
-        <p className="text-xl font-bold text-right w-4">{value}</p>
+        <p className="w-4 text-right text-xl font-bold">{value}</p>
         <input
-          className="ml-5 z-10"
+          className="z-10 ml-5"
           type="range"
           min={-180}
           max={180}
