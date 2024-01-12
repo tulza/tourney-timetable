@@ -8,7 +8,6 @@ const Navigation = () => {
       <div className="mb-32 flex justify-center gap-8 p-8">
         <NavButton name="/" />
         <NavButton name="home" />
-        <NavButton name="mathgame" />
       </div>
     </>
   );
@@ -19,7 +18,7 @@ const NavButton = ({ name }: { name: string }) => {
     <Link to={`${name}`}>
       <motion.div whileHover="hover">
         <motion.div
-          className="outline-element bg-element shadow-background border-background outline-6 rounded-full border-4 p-4 px-8 font-bold shadow-lg outline"
+          className="outline-6 rounded-full border-4 border-background bg-element p-4 px-8 font-bold shadow-lg shadow-background outline outline-element"
           variants={{ hover: { y: 10, borderColor: "var(--white)" } }}
         >
           <code>{name}</code>
