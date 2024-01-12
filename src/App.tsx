@@ -3,21 +3,17 @@ import "./styles.css";
 import {
   BrowserRouter as Router,
   Route,
-  Switch,
-  Redirect,
+  Routes,
+  Navigate,
 } from "react-router-dom";
 
 function App() {
   return (
     <Router basename="/tourney-timetable/">
-      <Switch>
-        <Route path="/home">
-          <Home />
-        </Route>
-        <Route path="/">
-          <Redirect to="/home" />
-        </Route>
-      </Switch>
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Navigate to="/home" />} />
+      </Routes>
     </Router>
   );
 }
